@@ -27,7 +27,16 @@
     "left main main main"
     "footer footer footer footer";
 }
-
+@media (max-width: 800px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "left"
+      "footer";
+  }
+}
 .header {
   /*margin: 30px 0;*/
   margin: 0 auto;
@@ -35,9 +44,7 @@
   /*justify-content: center;*/
   /*flex-direction: column;*/
 }
-
 .left-pane > figure > img {
-  
   width: 20vh;
 }
 
@@ -48,4 +55,14 @@ header > img {
   transform: rotate(5deg);
 
   /*height: 200px;*/
+}
+
+.main-pane > img {
+  width: 30vh;
+  float: left;
+}
+
+.bottom-pane {
+  display: flex;
+  justify-content: center;
 }
