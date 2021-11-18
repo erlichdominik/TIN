@@ -4,7 +4,14 @@ var server = http.createServer((req, res) => {
 
   // url.pathname will return us /add or /multiply etc
   const url = new URL(req.url, `http://${req.headers.host}`);
-  console.log("url object", url);
+  //console.log("url object", url);
+  console.log("searchParams", url.searchParams.get("ada"));
+
+  //switch(url.pathname) {
+  ////adding
+  //case '/add':
+
+  //}
 
   res.end("Hello World\n");
 });
