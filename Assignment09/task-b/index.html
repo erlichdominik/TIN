@@ -7,7 +7,7 @@
     <title>Document</title>
   </head>
   <body>
-    <form action="post" id="form">
+    <form id="form">
       <label for="firstNumber">First number:</label>
       <input type="number" id="firstNumber" name="firstNumber" />
 
@@ -17,20 +17,24 @@
       <p>Choose operand:</p>
       <div>
         <input type="radio" id="add" name="op" value="add" />
-        <label for="">Add</label>
+        <label for="op">Add</label>
 
         <input type="radio" id="subtract" name="op" value="subtract" />
-        <label for="">Subtract</label>
+        <label for="op">Subtract</label>
 
         <input type="radio" id="multiply" name="op" value="multiply" />
-        <label for="">Multiply</label>
+        <label for="op">Multiply</label>
 
         <input type="radio" id="divide" name="op" value="divide" />
-        <label for="">Divide</label>
+        <label for="op">Divide</label>
       </div>
 
       <input type="submit" value="Submit" />
     </form>
+    <div>
+      <p>Result:</p>
+      <p id="result"></p>
+    </div>
   </body>
   <script src="index.js"></script>
 </html>
