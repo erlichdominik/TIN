@@ -18,17 +18,17 @@ model ToDo {
 }
 
 model ToDoCategory {
-  id         Int       @id @default(autoincrement())
+  id         Int      @id @default(autoincrement())
   priority   String
-  ToDo       ToDo?     @relation(fields: [toDoId], references: [id])
-  toDoId     Int?
-  Category   Category? @relation(fields: [categoryId], references: [id])
-  categoryId Int?
+  ToDo       ToDo     @relation(fields: [toDoId], references: [id])
+  toDoId     Int
+  Category   Category @relation(fields: [categoryId], references: [id])
+  categoryId Int
 }
 
 model Category {
   id           Int            @id @default(autoincrement())
   name         String
   Colour       String
-  ToDoCategroy ToDoCategory[]
+  toDoCategory ToDoCategory[]
 }
