@@ -11,12 +11,12 @@ router.get("/", async (request, response, next) => {
 });
 
 router.put("/", async (req, res) => {
-  const todo = await prisma.toDo.create({
-    data: {
-      description: "test",
-      is_done: false,
-    },
-  });
+  // const todo = await prisma.toDo.create({
+  //   data: {
+  //     description: "test",
+  //     is_done: false,
+  //   },
+  // });
 });
 
 module.exports = router;

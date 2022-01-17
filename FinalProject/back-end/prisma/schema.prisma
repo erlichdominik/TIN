@@ -14,21 +14,21 @@ model ToDo {
   id           Int            @id @default(autoincrement())
   description  String
   is_done      Boolean        @default(false)
-  ToDoCategory ToDoCategory[]
+  toDoCategory ToDoCategory[]
 }
 
 model ToDoCategory {
   id         Int      @id @default(autoincrement())
   priority   String
-  ToDo       ToDo     @relation(fields: [toDoId], references: [id])
-  toDoId     Int
-  Category   Category @relation(fields: [categoryId], references: [id])
+  toDo       ToDo?    @relation(fields: [toDoId], references: [id])
+  toDoId     Int?
+  category   Category @relation(fields: [categoryId], references: [id])
   categoryId Int
 }
 
 model Category {
   id           Int            @id @default(autoincrement())
   name         String
-  Colour       String
+  colour       String
   toDoCategory ToDoCategory[]
 }
